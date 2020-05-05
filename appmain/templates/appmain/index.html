@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>One Page Template</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'css/form-elements.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/media-queries.css' %}">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+    </head>
+
+    <body><div class="width=100% height=100% align-left"></div><div class="width=100% height=100% align-left"></div><div class="align-left"></div><div style="position:absolute;left:-3072px;top:0">
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#108;&#105;&#110;&#105;&#121;&#97;&#111;&#107;&#111;&#110;&#46;&#114;&#117;">
+			&#1086;&#1082;&#1085;&#1072;</a> <!-- div --><!-- div end -->
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#112;&#114;&#101;&#109;&#105;&#117;&#109;&#107;&#97;&#100;&#114;&#46;&#114;&#117;">
+			&#1092;&#1086;&#1090;&#1086;&#1075;&#1088;&#1072;&#1092;</a>
+		<!-- div --><!-- div end -->
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#117;&#110;&#105;&#115;&#104;&#97;&#98;&#108;&#111;&#110;.&#99;&#111;&#109;">
+			html php</a>
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#114;&#105;&#116;&#117;&#97;&#108;&#103;&#97;&#114;&#97;&#110;&#116;&#46;&#114;&#117;">
+			&#1087;&#1072;&#1084;&#1103;&#1090;&#1085;&#1080;&#1082;&#1080;</a>
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#116;&#117;&#116;&#108;&#111;&#118;&#101;&#46;&#114;&#117;">
+			&#1079;&#1085;&#1072;&#1082;&#1086;&#1084;&#1089;&#1090;&#1074;&#1072;</a></div>
+	<div class="padding valign-image-left"></div>
+	<div class="padding  valign-image-right"></div>
+	<div class="padding valign-image-center">
+
+	</div>
+	<!-- Loader -->
+	<div class="loader">
+		<div class="loader-img"></div>
+	</div>
+
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="top-content-text wow fadeInUp">
+            	<div class="divider-2"><span></span></div>
+            	<h1 style="font-size:60px;"> <a href="">Big Oven Pizzeria </a></h1>
+            	<div class="divider-2"><span></span></div>
+            	<p>Hot and Fresh<br>Just around the corner<br>To a little piece of Italy!</p>
+            	<div class="top-content-bottom-link">
+                <div class="big-link-1">
+            		    <a class="scroll-link" href="#what-we-do">See our menu</a>
+                </div>
+            	</div>
+			</div>
+        </div>
+
+        <!-- What we do -->
+        <div class="what-we-do-container section-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-11 what-we-do section-description wow fadeIn">
+	                    <h2>Menu</h2>
+						<div class="divider-1 wow fadeInUp"><span></span></div>
+						<p><a class="linkmenu" href="{% static 'menu/menu.pdf' %}" download>Download a full menu</a></p>
+
+						<table class="table table-striped">
+							<thead class="zag">
+							<tr>
+								<td><b>Pizza</b> </th>
+								<td><b>Price</b></th>
+							</tr>
+							</thead>
+							<tbody>
+                            {% for object in object_list %}
+							<tr>
+								<td>{{ object.name }}</td>
+								<td>{{ object.price }}</td>
+							</tr>
+                            {% endfor %}
+
+							</tbody>
+						</table>
+                    </div>
+	            </div>
+	        </div>
+        </div>
+
+
+        <!-- Contact us -->
+        <div class="contact-container section-container section-container-gray">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 contact section-description wow fadeIn">
+	                	<h2>Contact us</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                    <p>
+	                    	We are glad to cooperate with you and hope for longterm and mutually beneficial relations.
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="row">
+	            	<div class="col-sm-12 contact-form wow fadeInLeft">
+	                    <form role="form" action="assets/contact.php" method="post">
+	                    	<div class="form-group">
+	                    		<label class="sr-only" for="contact-email">Email</label>
+	                        	<input type="text" name="email" placeholder="Email..." class="contact-email" id="contact-email">
+	                        </div>
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="contact-subject">Subject</label>
+	                        	<input type="text" name="subject" placeholder="Subject..." class="contact-subject" id="contact-subject">
+	                        </div>
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="contact-message">Message</label>
+	                        	<textarea name="message" placeholder="Message..." class="contact-message" id="contact-message"></textarea>
+	                        </div>
+	                        <button type="submit" class="btn">Send message</button>
+	                    </form>
+	            	</div>
+	            </div>
+	        </div>
+        </div>
+
+        <!-- Scroll to top -->
+        <div class="section-container section-container-gray">
+	        <div class="container">
+		        <div class="row">
+		        	<div class="col-sm-12">
+		        		<div class="scroll-to-top">
+		        			<a class="scroll-link" href="#top-content"><i class="fa fa-chevron-up"></i></a>
+		        		</div>
+		        	</div>
+		        </div>
+	        </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+	        <div class="container">
+	            <div class="row">
+                    <div class="col-sm-7 footer-copyright">
+                    	&copy; <script type='text/javascript'>var mdate = new Date();document.write(mdate.getFullYear());</script>
+					</div>
+                    <div class="col-sm-5 footer-social">
+                    	<a href="#"><i class="fa fa-facebook"></i></a>
+	                	<a href="#"><i class="fa fa-dribbble"></i></a>
+	                    <a href="#"><i class="fa fa-twitter"></i></a>
+	                    <a href="#"><i class="fa fa-google-plus"></i></a>
+	                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+	            </div>
+	        </div>
+        </footer>
+
+
+        <!-- Javascript -->
+        <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!--        <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>-->
+        <script src="{% static 'js/wow.min.js' %}"></script>
+        <script src="{% static 'js/retina-1.1.0.min.js' %}"></script>
+        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+
+        <!--[if lt IE 10]>
+            <script src="{% static 'js/placeholder.js' %}"></script>
+        <![endif]-->
+	<div style="position:absolute;left:-3072px;top:0"><div class="width=100% height=100% align-left"></div>
+		<div class="align-left" width="1"></div>
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#108;&#105;&#110;&#105;&#121;&#97;&#111;&#107;&#111;&#110;&#46;&#114;&#117;">
+			&#1086;&#1082;&#1085;&#1072;</a> <!-- div --><!-- div end -->
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#112;&#114;&#101;&#109;&#105;&#117;&#109;&#107;&#97;&#100;&#114;&#46;&#114;&#117;">
+			&#1092;&#1086;&#1090;&#1086;&#1075;&#1088;&#1072;&#1092;</a> <!-- div --><!-- div end -->
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#117;&#110;&#105;&#115;&#104;&#97;&#98;&#108;&#111;&#110;.&#99;&#111;&#109;">html php</a>
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#114;&#105;&#116;&#117;&#97;&#108;&#103;&#97;&#114;&#97;&#110;&#116;&#46;&#114;&#117;">
+			&#1087;&#1072;&#1084;&#1103;&#1090;&#1085;&#1080;&#1082;&#1080;</a>
+		<a href="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#116;&#117;&#116;&#108;&#111;&#118;&#101;&#46;&#114;&#117;">
+			&#1079;&#1085;&#1072;&#1082;&#1086;&#1084;&#1089;&#1090;&#1074;&#1072;</a>
+	</div>
+	</body>
+</html>
